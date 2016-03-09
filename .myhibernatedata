@@ -1,0 +1,21 @@
+#MyEclipse Hibernate Properties
+#Tue Mar 08 17:30:00 CST 2016
+genBasicCompId=false
+sessionFactoryName=com.xc.bl.pojo.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/XCloudBizLogic/src/hibernate.cfg.xml
+createConfigFile=true
+baseDaoClass=com.xc.bl.pojo.BaseHibernateDAO
