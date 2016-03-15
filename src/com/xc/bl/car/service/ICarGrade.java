@@ -2,6 +2,7 @@ package com.xc.bl.car.service;
 
 import java.util.List;
 
+import com.xc.bl.car.po.CarGradeAllInfoPo;
 import com.xc.bl.pojo.CarGrade;
 
 public interface ICarGrade {
@@ -36,5 +37,21 @@ public interface ICarGrade {
 	 */
 	public List<CarGrade> getCarGradeByCmid(int cmid);
 	
+	/**
+	 *  获得车配置等级，根据（配置名，年代，排量，车型id）
+	 * @param cgname
+	 * @param cgy
+	 * @param cge
+	 * @param cmid
+	 * @return
+	 */
+	public CarGrade getCarGradeByUnique(String cgname,int cgy,String cge,int cmid);
+	
+	/**
+	 * 获得车配置等级的所有信息，通过cgid
+	 * @param cgid
+	 * @return
+	 */
+	public CarGradeAllInfoPo getCarGradeAllInfoById(int cgid);
 	
 }

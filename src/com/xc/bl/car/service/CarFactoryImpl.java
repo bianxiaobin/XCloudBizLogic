@@ -26,7 +26,7 @@ public class CarFactoryImpl implements ICarFactory{
 		finally{
 			session.close();
 		}
-		return null;
+		return carFactory;
 	}
 
 	@Override

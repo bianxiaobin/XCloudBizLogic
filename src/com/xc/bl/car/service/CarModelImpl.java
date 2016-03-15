@@ -24,7 +24,7 @@ public class CarModelImpl implements ICarModel {
 		} finally {
 			session.close();
 		}
-		return null;
+		return carModel;
 	}
 
 	@Override

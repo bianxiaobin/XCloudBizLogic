@@ -7,29 +7,30 @@ import org.hibernate.Session;
 
 import com.xc.bl.pojo.CarBrand;
 import com.xc.bl.pojo.HibernateSessionFactory;
+import com.xc.bl.utils.CommonDefine.BrandType;
 
-public class CarBrandDaoImpl implements ICarBrandDao{
+public class CarBrandDaoImpl implements ICarBrandDao {
 
 	@Override
-	public List<CarBrand> getCarBrandList(int type, int maxCount) {
-		// TODO Auto-generated method stub
+	public List<CarBrand> getCarBrandList1(BrandType type, int maxCount) {
+
 		String hql = "";
-		if (type != 0) {
-			hql = "from CarBrand where carBrandIshot=:carBrandIshot order by car_brand_name_letter ASC limit :maxCount";
+		if (type != BrandType.ALL) {
+			hql = "from CarBrand where carBrandIshot=:carBrandIshot order by carBrandNameLetter ASC";
 		} else {
-			hql = "from CarBrand  order by car_brand_name_letter ASC limit :maxCount";
+			hql = "from CarBrand order by carBrandNameLetter ASC ";
 		}
 		Session session = HibernateSessionFactory.getSession();
 		Query query = session.createQuery(hql);
-		if (type != 0) {
-			query.setInteger("carBrandIshot", type);
+		if (type != BrandType.ALL) {
+			query.setInteger("carBrandIshot", type.ordinal());
 		}
-		query.setInteger("maxCount", maxCount);
+		query.setMaxResults(maxCount);
 		List<CarBrand> cb_list = query.list();
 		if (cb_list == null || cb_list.isEmpty()) {
 			return null;
 		}
 		return cb_list;
 	}
-	
+
 }

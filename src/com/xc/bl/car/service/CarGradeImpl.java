@@ -5,6 +5,9 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import com.xc.bl.car.dao.CarGradeDaoImpl;
+import com.xc.bl.car.dao.ICarGradeDao;
+import com.xc.bl.car.po.CarGradeAllInfoPo;
 import com.xc.bl.pojo.Car;
 import com.xc.bl.pojo.CarGrade;
 import com.xc.bl.pojo.CarGradeDAO;
@@ -50,4 +53,17 @@ public class CarGradeImpl implements ICarGrade {
 		return carGradeDao.findByCarModelId(cmid);
 	}
 
+
+	@Override
+	public CarGrade getCarGradeByUnique(String cgname, int cgy, String cge,
+			int cmid) {
+		ICarGradeDao iCarGradeDao=new CarGradeDaoImpl();
+		return iCarGradeDao.getCarGradeByUnique(cgname, cgy, cge, cmid);
+	}
+
+	@Override
+	public CarGradeAllInfoPo getCarGradeAllInfoById(int cgid) {
+		ICarGradeDao iCarGradeDao=new CarGradeDaoImpl();
+		return iCarGradeDao.getCarGradeAllInfoById(cgid);
+	}
 }

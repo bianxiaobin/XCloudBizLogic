@@ -3,19 +3,20 @@ package com.xc.bl.car.service;
 import java.util.List;
 
 import com.xc.bl.pojo.CarBrand;
+import com.xc.bl.utils.CommonDefine.BrandType;
 
-public interface ICarBrand {
+public interface ICarBrand {	
 
 	/**
 	 * 获得车品牌列表
 	 * 
-	 * @param type
-	 *            0：全部车   1：热门车  2：非热门车
+	 * @param type  BrandType
+	 *           	BrandType  ALL：全部车  HOT：热门车  NOT_HOT：非热门车
 	 * @param maxCount
 	 *            返回最大条数(最大不能大于200)
 	 * @return
 	 */
-	public List<CarBrand> getCarBrandList(int type, int maxCount);
+	public List<CarBrand> getCarBrandList(BrandType type, int maxCount);
 
 	/**
 	 * 添加车品牌
@@ -39,5 +40,8 @@ public interface ICarBrand {
 	 * @return
 	 */
 	public CarBrand getCarBrandByName(String CBName);
+	
+	
+	
 
 }

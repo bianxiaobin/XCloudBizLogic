@@ -10,7 +10,7 @@ public class CarBrand implements java.io.Serializable {
 
 	private Integer carBrandId;
 	private String carBrandName;
-	private Boolean carBrandIshot;
+	private Short carBrandIshot;
 	private String carBrandNameLetter;
 	private String carBrandLogo;
 
@@ -21,7 +21,7 @@ public class CarBrand implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public CarBrand(String carBrandName, Boolean carBrandIshot,
+	public CarBrand(String carBrandName, Short carBrandIshot,
 			String carBrandNameLetter, String carBrandLogo) {
 		this.carBrandName = carBrandName;
 		this.carBrandIshot = carBrandIshot;
@@ -47,11 +47,11 @@ public class CarBrand implements java.io.Serializable {
 		this.carBrandName = carBrandName;
 	}
 
-	public Boolean getCarBrandIshot() {
+	public Short getCarBrandIshot() {
 		return this.carBrandIshot;
 	}
 
-	public void setCarBrandIshot(Boolean carBrandIshot) {
+	public void setCarBrandIshot(Short carBrandIshot) {
 		this.carBrandIshot = carBrandIshot;
 	}
 

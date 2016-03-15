@@ -11,9 +11,9 @@
             <generator class="identity" />
         </id>
         <property name="carBrandName" type="java.lang.String">
-            <column name="car_brand_name" length="50" not-null="true" />
+            <column name="car_brand_name" length="50" not-null="true" unique="true" />
         </property>
-        <property name="carBrandIshot" type="java.lang.Boolean">
+        <property name="carBrandIshot" type="java.lang.Short">
             <column name="car_brand_ishot" not-null="true" />
         </property>
         <property name="carBrandNameLetter" type="java.lang.String">

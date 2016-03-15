@@ -10,17 +10,18 @@ import com.xc.bl.car.dao.ICarBrandDao;
 import com.xc.bl.pojo.CarBrand;
 import com.xc.bl.pojo.CarBrandDAO;
 import com.xc.bl.pojo.HibernateSessionFactory;
+import com.xc.bl.utils.CommonDefine.BrandType;
 
 public class CarBrandImpl implements ICarBrand{
 
 	@Override
-	public List<CarBrand> getCarBrandList(int type, int maxCount) {
+	public List<CarBrand> getCarBrandList(BrandType type, int maxCount) {
 		//最大返回200
 		if(maxCount>200){
 			maxCount=200;
 		}
 		ICarBrandDao iCarBrandDao=new CarBrandDaoImpl();
-		return iCarBrandDao.getCarBrandList(type, maxCount);
+		return iCarBrandDao.getCarBrandList1(type, maxCount);
 	}
 
 	@Override

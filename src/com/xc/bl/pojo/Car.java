@@ -22,8 +22,9 @@ public class Car implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Car(Integer carGradeId) {
+	public Car(Integer carGradeId, Short carBindState) {
 		this.carGradeId = carGradeId;
+		this.carBindState = carBindState;
 	}
 
 	/** full constructor */

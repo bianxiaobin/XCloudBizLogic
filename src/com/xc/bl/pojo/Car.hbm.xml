@@ -23,7 +23,7 @@
             <column name="car_uuid" length="100" />
         </property>
         <property name="carBindState" type="java.lang.Short">
-            <column name="car_bind_state" />
+            <column name="car_bind_state" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>
