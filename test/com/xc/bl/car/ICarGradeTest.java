@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import com.xc.bl.car.dao.CarGradeDaoImpl;
 import com.xc.bl.car.dao.ICarGradeDao;
-import com.xc.bl.car.po.CarGradeAllInfoPo;
+import com.xc.bl.car.pojo.CarGradeAllInfoPo;
 import com.xc.bl.car.service.CarGradeImpl;
 import com.xc.bl.car.service.ICarGrade;
 

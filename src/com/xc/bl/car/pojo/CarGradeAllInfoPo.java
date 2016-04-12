@@ -1,4 +1,4 @@
-package com.xc.bl.car.po;
+package com.xc.bl.car.pojo;
 
 import com.xc.bl.pojo.CarBrand;
 import com.xc.bl.pojo.CarFactory;

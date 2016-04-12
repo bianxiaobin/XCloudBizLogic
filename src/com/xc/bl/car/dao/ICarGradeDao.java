@@ -1,7 +1,7 @@
 package com.xc.bl.car.dao;
 
-import com.xc.bl.car.po.CarGradeAllInfoMd;
-import com.xc.bl.car.po.CarGradeAllInfoPo;
+import com.xc.bl.car.pojo.CarGradeAllInfoMd;
+import com.xc.bl.car.pojo.CarGradeAllInfoPo;
 import com.xc.bl.pojo.CarGrade;
 
 public interface ICarGradeDao {

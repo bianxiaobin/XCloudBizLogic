@@ -32,5 +32,4 @@ public class CarBrandDaoImpl implements ICarBrandDao {
 		}
 		return cb_list;
 	}
-
 }

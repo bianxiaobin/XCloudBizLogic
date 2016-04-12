@@ -11,7 +11,6 @@ public class CarInfoImpl implements ICarInfo {
 
 	@Override
 	public Car addCar(Car car) {
-		// TODO Auto-generated method stub
 		CarDAO carDao = new CarDAO();
 		Session session = HibernateSessionFactory.getSession();
 		Transaction tx = session.beginTransaction();
@@ -28,7 +27,6 @@ public class CarInfoImpl implements ICarInfo {
 
 	@Override
 	public int updCarInfoById(Car car) {
-		// TODO Auto-generated method stub
 		int updCount=0;
 		CarDAO carDao=new CarDAO();
 		Session session=HibernateSessionFactory.getSession();
@@ -49,7 +47,6 @@ public class CarInfoImpl implements ICarInfo {
 
 	@Override
 	public Car getCarById(long cid) {
-		// TODO Auto-generated method stub
 		CarDAO carDao=new CarDAO();
 		return carDao.findById(cid);
 	}

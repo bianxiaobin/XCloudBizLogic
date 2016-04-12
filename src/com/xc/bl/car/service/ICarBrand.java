@@ -13,7 +13,7 @@ public interface ICarBrand {
 	 * @param type  BrandType
 	 *           	BrandType  ALL：全部车  HOT：热门车  NOT_HOT：非热门车
 	 * @param maxCount
-	 *            返回最大条数(最大不能大于200)
+	 *            返回最大条数(最大300)
 	 * @return
 	 */
 	public List<CarBrand> getCarBrandList(BrandType type, int maxCount);

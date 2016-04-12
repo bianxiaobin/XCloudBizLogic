@@ -2,7 +2,7 @@ package com.xc.bl.car.service;
 
 import java.util.List;
 
-import com.xc.bl.car.po.CarGradeAllInfoPo;
+import com.xc.bl.car.pojo.CarGradeAllInfoPo;
 import com.xc.bl.pojo.CarGrade;
 
 public interface ICarGrade {

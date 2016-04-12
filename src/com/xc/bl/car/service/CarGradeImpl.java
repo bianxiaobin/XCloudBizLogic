@@ -7,7 +7,7 @@ import org.hibernate.Transaction;
 
 import com.xc.bl.car.dao.CarGradeDaoImpl;
 import com.xc.bl.car.dao.ICarGradeDao;
-import com.xc.bl.car.po.CarGradeAllInfoPo;
+import com.xc.bl.car.pojo.CarGradeAllInfoPo;
 import com.xc.bl.pojo.Car;
 import com.xc.bl.pojo.CarGrade;
 import com.xc.bl.pojo.CarGradeDAO;

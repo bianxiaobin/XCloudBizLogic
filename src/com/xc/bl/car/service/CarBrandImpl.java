@@ -16,9 +16,9 @@ public class CarBrandImpl implements ICarBrand{
 
 	@Override
 	public List<CarBrand> getCarBrandList(BrandType type, int maxCount) {
-		//最大返回200
-		if(maxCount>200){
-			maxCount=200;
+		//最大返回300
+		if(maxCount>300){
+			maxCount=300;
 		}
 		ICarBrandDao iCarBrandDao=new CarBrandDaoImpl();
 		return iCarBrandDao.getCarBrandList1(type, maxCount);

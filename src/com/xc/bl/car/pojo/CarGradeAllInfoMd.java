@@ -1,4 +1,4 @@
-package com.xc.bl.car.po;
+package com.xc.bl.car.pojo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
