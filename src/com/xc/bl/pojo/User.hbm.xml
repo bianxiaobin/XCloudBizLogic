@@ -8,7 +8,7 @@
     <class name="com.xc.bl.pojo.User" table="user" catalog="xcdb">
         <id name="userId" type="java.lang.Long">
             <column name="user_id" />
-            <generator class="identity" />
+            <generator class="native" />
         </id>
         <property name="userPhone" type="java.lang.Long">
             <column name="user_phone" not-null="true" unique="true" />

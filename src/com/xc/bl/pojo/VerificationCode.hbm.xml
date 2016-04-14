@@ -8,7 +8,7 @@
     <class name="com.xc.bl.pojo.VerificationCode" table="verification_code" catalog="xcdb">
         <id name="vcId" type="java.lang.Long">
             <column name="vc_id" />
-            <generator class="identity" />
+            <generator class="native" />
         </id>
         <property name="vcPhone" type="java.lang.Long">
             <column name="vc_phone" not-null="true" />

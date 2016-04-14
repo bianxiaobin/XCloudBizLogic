@@ -8,7 +8,7 @@
     <class name="com.xc.bl.pojo.Config" table="config" catalog="xcdb">
         <id name="configId" type="java.lang.Integer">
             <column name="config_id" />
-            <generator class="identity" />
+            <generator class="native" />
         </id>
         <property name="cfgName" type="java.lang.String">
             <column name="cfg_name" length="100" not-null="true" />

@@ -8,7 +8,7 @@
     <class name="com.xc.bl.pojo.CarGrade" table="car_grade" catalog="xcdb">
         <id name="carGradeId" type="java.lang.Integer">
             <column name="car_grade_id" />
-            <generator class="identity" />
+            <generator class="native" />
         </id>
         <property name="carGradeName" type="java.lang.String">
             <column name="car_grade_name" length="50" not-null="true" />

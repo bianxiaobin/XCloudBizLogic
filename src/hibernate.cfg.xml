@@ -59,6 +59,21 @@
 		<mapping resource="com/xc/bl/pojo/CarModel.hbm.xml" />
 		<mapping resource="com/xc/bl/pojo/VerificationCode.hbm.xml" />
 		<mapping resource="com/xc/bl/pojo/Config.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/TappVerSupport.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/MusicAlbum.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/MusicLog.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/AppType.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/AppUpd.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/Music.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/MapUpd.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/TappPhone.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/TappCar.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/Province.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/Singer.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/App.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/StoreFocusShow.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/Map.hbm.xml" />
+		<mapping resource="com/xc/bl/pojo/AppLog.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>

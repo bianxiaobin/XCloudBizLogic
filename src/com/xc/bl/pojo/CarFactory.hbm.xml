@@ -8,7 +8,7 @@
     <class name="com.xc.bl.pojo.CarFactory" table="car_factory" catalog="xcdb">
         <id name="carFactoryId" type="java.lang.Integer">
             <column name="car_factory_id" />
-            <generator class="identity" />
+            <generator class="native" />
         </id>
         <property name="carFactoryName" type="java.lang.String">
             <column name="car_factory_name" length="50" not-null="true" />
