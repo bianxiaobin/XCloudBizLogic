@@ -1,6 +1,6 @@
 package com.xc.bl.vc.dao;
 
-import com.xc.bl.pojo.VerificationCode;
+import com.xc.bl.entities.VerificationCode;
 
 public interface IVerifyCodeDao {
 	/**
@@ -17,4 +17,12 @@ public interface IVerifyCodeDao {
 	 * @return
 	 */
 	public VerificationCode getVcFirstByPhoneVc(long phoneNum,String vc);
+	
+	//====================================================
+	
+	/***
+	 * 添加短信验证码发送信息
+	 * @param vc
+	 */
+	public void addVc(VerificationCode vc);
 }

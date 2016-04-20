@@ -5,4 +5,4 @@ public class CommonDefine {
 	public static enum BrandType{
 		ALL,NOT_HOT,HOT;
 	}
-}
+} 

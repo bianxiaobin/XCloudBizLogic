@@ -1,9 +1,9 @@
 package com.xc.bl.car.pojo;
 
-import com.xc.bl.pojo.CarBrand;
-import com.xc.bl.pojo.CarFactory;
-import com.xc.bl.pojo.CarGrade;
-import com.xc.bl.pojo.CarModel;
+import com.xc.bl.entities.CarBrand;
+import com.xc.bl.entities.CarFactory;
+import com.xc.bl.entities.CarGrade;
+import com.xc.bl.entities.CarModel;
 
 public class CarGradeAllInfoPo {
 	private CarBrand cb;
@@ -33,6 +33,11 @@ public class CarGradeAllInfoPo {
 	}
 	public void setCg(CarGrade cg) {
 		this.cg = cg;
+	}
+	@Override
+	public String toString() {
+		return "CarGradeAllInfoPo [cb=" + cb + ", cf=" + cf + ", cm=" + cm
+				+ ", cg=" + cg + "]";
 	}
 	
 }
