@@ -17,7 +17,7 @@ public interface ICarBrandDao {
 	 * 
 	 * @param carBrand
 	 */
-	public CarBrand addCarBrand(CarBrand carBrand);
+	public void addCarBrand(CarBrand carBrand);
 
 	/**
 	 * 获得车品牌，根据id

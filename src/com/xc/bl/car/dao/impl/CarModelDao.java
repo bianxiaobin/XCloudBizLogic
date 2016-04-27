@@ -14,56 +14,33 @@ public class CarModelDao implements ICarModelDao {
 
 	@Autowired
 	private IBaseDAO<CarModel> baseDAO;
-	
+
 	@Override
-	public CarModel addCarModel(CarModel carModel) {
+	public void addCarModel(CarModel carModel) {
 		baseDAO.save(carModel);
-		return carModel;
-		
-//		CarModelDAO carModelDao = new CarModelDAO();
-//		Session session = HibernateSessionFactory.getSession();
-//		Transaction tx = session.beginTransaction();
-//		try {
-//			carModelDao.save(carModel);
-//			tx.commit();
-//		} catch (Exception ex) {
-//			tx.rollback();
-//		} finally {
-//			session.close();
-//		}
-//		return carModel;
 	}
 
 	@Override
 	public CarModel getCarModelById(int cmid) {
-		
-		return baseDAO.get("from CarModel where carModelId=?", new Object[]{cmid});
-		
-//		CarModelDAO carModelDao = new CarModelDAO();
-//		return carModelDao.findById(cmid);
+
+		return baseDAO.get("from CarModel where carModelId=?",
+				new Object[] { cmid });
 	}
 
 	@Override
 	public CarModel getCarModelByName(String CMName) {
-		
-		return baseDAO.get("from CarModel where carModelName=?", new Object[]{CMName});
-		
-//		
-//		CarModelDAO carModelDao = new CarModelDAO();
-//		List<CarModel> cm_list = carModelDao.findByCarModelName(CMName);
-//		if (cm_list == null || cm_list.isEmpty()) {
-//			return null;
-//		}
-//		return cm_list.get(0);
+
+		return baseDAO.get("from CarModel where carModelName=?",
+				new Object[] { CMName });
+
 	}
 
 	@Override
 	public List<CarModel> getCarModelByCfid(int cfid) {
-		
-		return baseDAO.find("from CarModel where carFactoryId=?",new Object[]{cfid});
-		
-//		CarModelDAO carModelDao=new CarModelDAO();
-//		return carModelDao.findByCarFactoryId(cfid);
+
+		return baseDAO.find("from CarModel where carFactoryId=?",
+				new Object[] { cfid });
+
 	}
 
 }

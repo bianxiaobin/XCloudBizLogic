@@ -16,6 +16,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.xc.bl.app.service.IAppInfoService;
 import com.xc.bl.entities.App;
+import com.xc.bl.utils.CommonDefine.AppPushType;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,7 +28,7 @@ public class IAppInfoTest {
 	
 	@Test
 	public void testGetAppListByIspush() {
-		List<App> app_list=iAppInfo.getAppListByIspush((short)2);
+		List<App> app_list=iAppInfo.getAppListByIspush(AppPushType.PUSH);
 		for(App app : app_list){
 			System.out.println(app.toString());
 		}

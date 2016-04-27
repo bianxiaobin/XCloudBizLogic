@@ -101,4 +101,13 @@ public class Car implements java.io.Serializable {
 		this.carBindState = carBindState;
 	}
 
+	@Override
+	public String toString() {
+		return "Car [carId=" + carId + ", carGradeId=" + carGradeId
+				+ ", carApName=" + carApName + ", carApPwd=" + carApPwd
+				+ ", carUuid=" + carUuid + ", carBindState=" + carBindState
+				+ "]";
+	}
+
+	
 }

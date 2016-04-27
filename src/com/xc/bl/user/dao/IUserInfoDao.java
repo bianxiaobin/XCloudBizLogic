@@ -19,7 +19,7 @@ public interface IUserInfoDao {
 	 * 
 	 * @param user
 	 */
-	public User addUser(User user);
+	public void addUser(User user);
 
 	/**
 	 * 根据uid获得用户信息

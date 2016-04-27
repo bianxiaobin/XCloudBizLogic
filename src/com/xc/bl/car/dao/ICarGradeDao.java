@@ -19,7 +19,7 @@ public interface ICarGradeDao {
 	 * 
 	 * @param carGrade
 	 */
-	public CarGrade addCarGrade(CarGrade carGrade);
+	public void addCarGrade(CarGrade carGrade);
 
 	/**
 	 * 获得车配置等级信息，根据id

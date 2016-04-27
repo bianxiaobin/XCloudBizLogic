@@ -13,7 +13,7 @@ public interface ICarModelDao {
 	 * 
 	 * @param carModel
 	 */
-	public CarModel addCarModel(CarModel carModel);
+	public void addCarModel(CarModel carModel);
 
 	/**
 	 * 获得车型信息，根据id

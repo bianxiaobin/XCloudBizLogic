@@ -13,9 +13,6 @@ import com.xc.bl.store.service.IStoreFocusShowService;
 @Service("storeFocusShowService")
 public class StoreFocusShowServiceImpl implements IStoreFocusShowService{
 
-//	@Autowired
-//	private IBaseDAO<StoreFocusShow> baseDAO;
-	
 	@Autowired
 	private IStoreFocusShowDao storeFocusShowDao;
 	
@@ -23,11 +20,7 @@ public class StoreFocusShowServiceImpl implements IStoreFocusShowService{
 	public List<StoreFocusShow> getStoreFocusShowList() {
 
 		return storeFocusShowDao.getStoreFocusShowList();
-//		return baseDAO.find("from StoreFocusShow");
-		
-//		StoreFocusShowDAO storeFocusShowDAO=new StoreFocusShowDAO();
-//		List<StoreFocusShow> store_fs_list=storeFocusShowDAO.findAll();
-//		return store_fs_list;
+
 	}
 	
 }

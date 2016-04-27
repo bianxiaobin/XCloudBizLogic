@@ -8,5 +8,5 @@ public interface IUserLogInfoDao {
 	
 	//===============================================
 	
-	public UserLog addUserLog(UserLog user_log);
+	public void addUserLog(UserLog user_log);
 }

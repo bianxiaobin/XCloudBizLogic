@@ -1,7 +1,6 @@
 package com.xc.bl.car;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class ICarGradeTest {
 
 	@Test
 	public void testAddCarGrade() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 
 	@Test

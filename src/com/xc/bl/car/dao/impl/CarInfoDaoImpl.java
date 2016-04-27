@@ -7,7 +7,6 @@ import com.xc.bl.car.dao.ICarInfoDao;
 import com.xc.bl.entities.Car;
 import com.xc.bl.entities.dao.IBaseDAO;
 
-
 @Repository("carInfoDao")
 public class CarInfoDaoImpl implements ICarInfoDao {
 
@@ -15,22 +14,8 @@ public class CarInfoDaoImpl implements ICarInfoDao {
 	private IBaseDAO<Car> baseDAO;
 
 	@Override
-	public Car addCar(Car car) {
-
+	public void addCar(Car car) {
 		baseDAO.save(car);
-		return car;
-		// CarDAO carDao = new CarDAO();
-		// Session session = HibernateSessionFactory.getSession();
-		// Transaction tx = session.beginTransaction();
-		// try {
-		// carDao.save(car);
-		// tx.commit();
-		// } catch (Exception ex) {
-		// tx.rollback();
-		// } finally {
-		// session.close();
-		// }
-		// return car;
 	}
 
 	@Override
@@ -44,31 +29,10 @@ public class CarInfoDaoImpl implements ICarInfoDao {
 		}
 		return updCount;
 
-		// int updCount=0;
-		// CarDAO carDao=new CarDAO();
-		// Session session=HibernateSessionFactory.getSession();
-		// Transaction tx=session.beginTransaction();
-		// try{
-		// carDao.attachDirty(car);
-		// tx.commit();
-		// updCount=1;
-		// }
-		// catch(Exception ex){
-		// tx.rollback();
-		// }
-		// finally{
-		// session.close();
-		// }
-		// return updCount;
 	}
 
 	@Override
 	public Car getCarById(long cid) {
-		
-		return baseDAO.get("from Car where carId=?", new Object[]{cid});
-		
-//		
-//		CarDAO carDao = new CarDAO();
-//		return carDao.findById(cid);
+		return baseDAO.get("from Car where carId=?", new Object[] { cid });
 	}
 }

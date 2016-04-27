@@ -38,20 +38,6 @@ public class WebConfig {
 		}
 		return value;
 
-		// long curr_time=System.currentTimeMillis();
-		// String value=cfg_map.get(name);
-		// if(value==null || value.isEmpty() ||
-		// curr_time>upd_last_time+UPD_INTERVAL){
-		// ConfigDAO cfg_dao=new ConfigDAO();
-		// List<Config> cfg_list=cfg_dao.findByCfgName(name);
-		// if(cfg_list!=null && !cfg_list.isEmpty()){
-		// value=cfg_list.get(0).getCfgValue();
-		// cfg_map.put(name, value);
-		// upd_last_time=curr_time;
-		// }
-		// }
-		// return value;
-
 	}
 
 	public static int setCfgByName(String name, String value) {
@@ -69,28 +55,9 @@ public class WebConfig {
 		}
 		return result;
 
-		// int result=-1;
-		// String
-		// hql="update Config config set config.cfgValue=:cfgValue where config.cfgName=:cfgName";
-		// Session session=HibernateSessionFactory.getSession();
-		// Transaction tx=session.beginTransaction();
-		// try{
-		// Query query=session.createQuery(hql);
-		// query.setString("cfgName", name);
-		// query.setString("cfgValue", value);
-		// result=query.executeUpdate();
-		// tx.commit();
-		// }
-		// catch(Exception e){
-		// tx.rollback();
-		// }
-		// finally{
-		// session.close();
-		// }
-		// return result;
 	}
 
-	public static class Cfg {
-		public static String DOMAIN_IMG = "domain_img";
-	}
+//	public static class Cfg {
+//		public static String DOMAIN_IMG = "domain_img";
+//	}
 }

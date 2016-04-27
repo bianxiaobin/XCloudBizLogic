@@ -7,5 +7,7 @@ public interface IAppUpdInfoService {
 	
 	public AppUpd getAppUpdLastByAppId(int id);
 	
+	//======================================
+	
 	public void addAppUpd(AppUpd appUpd);
 }

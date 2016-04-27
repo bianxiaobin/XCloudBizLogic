@@ -8,7 +8,7 @@ public interface ICarInfoService {
 	 * 
 	 * @param car
 	 */
-	public Car addCar(Car car);
+	public void addCar(Car car);
 
 	/**
 	 * 更新车信息，根据CarId

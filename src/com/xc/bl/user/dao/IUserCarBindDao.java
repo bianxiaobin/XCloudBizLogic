@@ -15,7 +15,7 @@ public interface IUserCarBindDao {
 	 * 
 	 * @param ucb
 	 */
-	public UserCarBind addUserCarBind(UserCarBind ucb);
+	public void addUserCarBind(UserCarBind ucb);
 
 	/**
 	 * 获得用户绑定的车列表

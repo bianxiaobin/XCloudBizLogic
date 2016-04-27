@@ -14,7 +14,7 @@ public interface ICarFactoryDao {
 	 * 
 	 * @param carFactory
 	 */
-	public CarFactory addCarFactory(CarFactory carFactory);
+	public void addCarFactory(CarFactory carFactory);
 
 	/**
 	 * 获得车生产商信息，根据id
