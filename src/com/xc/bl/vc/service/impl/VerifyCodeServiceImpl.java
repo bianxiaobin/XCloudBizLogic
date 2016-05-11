@@ -1,5 +1,7 @@
 package com.xc.bl.vc.service.impl;
 
+import java.util.Calendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +34,16 @@ public class VerifyCodeServiceImpl implements IVerifyCodeService {
 
 		return verifyCodeDao.getVcFirstByPhoneVc(phoneNum, vc);
 
+	}
+
+	@Override
+	public void updVc(VerificationCode vc) {
+		verifyCodeDao.updVc(vc);
+	}
+
+	@Override
+	public long getCountByDate(Calendar begin, Calendar end) {
+		return verifyCodeDao.getCountByDate(begin, end);
 	}
 
 }

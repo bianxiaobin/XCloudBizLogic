@@ -1,6 +1,7 @@
 package com.xc.bl.vc.dao.impl;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,10 +50,23 @@ public class VerifyCodeDaoImpl implements IVerifyCodeDao {
 		return baseDAO.get(hql, param);
 		
 	}
+	
+	@Override
+	public long getCountByDate(Calendar begin, Calendar end) {
+		//logger.debug("开始时间 -> "+begin.getTime().toString()+"  结束时间 -> "+end.getTime().toString());
+		return baseDAO.count("select count(*) from VerificationCode where vcSendDatetime>? and vcSendDatetime<? ",new Object[]{begin.getTime(),end.getTime()});
+	}
 
 	@Override
 	public void addVc(VerificationCode vc) {
 		baseDAO.save(vc);
 	}
+
+	@Override
+	public void updVc(VerificationCode vc) {
+		baseDAO.update(vc);
+	}
+
+
 
 }

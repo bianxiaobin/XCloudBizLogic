@@ -19,6 +19,7 @@ public class VerificationCode implements java.io.Serializable {
 	private Long vcId;
 	private Long vcPhone;
 	private String vcValue;
+	private String vcSendResult;
 	private Timestamp vcSendDatetime;
 
 	// Constructors
@@ -27,11 +28,20 @@ public class VerificationCode implements java.io.Serializable {
 	public VerificationCode() {
 	}
 
-	/** full constructor */
+	/** minimal constructor */
 	public VerificationCode(Long vcPhone, String vcValue,
 			Timestamp vcSendDatetime) {
 		this.vcPhone = vcPhone;
 		this.vcValue = vcValue;
+		this.vcSendDatetime = vcSendDatetime;
+	}
+
+	/** full constructor */
+	public VerificationCode(Long vcPhone, String vcValue, String vcSendResult,
+			Timestamp vcSendDatetime) {
+		this.vcPhone = vcPhone;
+		this.vcValue = vcValue;
+		this.vcSendResult = vcSendResult;
 		this.vcSendDatetime = vcSendDatetime;
 	}
 
@@ -63,6 +73,15 @@ public class VerificationCode implements java.io.Serializable {
 
 	public void setVcValue(String vcValue) {
 		this.vcValue = vcValue;
+	}
+
+	@Column(name = "vc_send_result", length = 200)
+	public String getVcSendResult() {
+		return this.vcSendResult;
+	}
+
+	public void setVcSendResult(String vcSendResult) {
+		this.vcSendResult = vcSendResult;
 	}
 
 	@Column(name = "vc_send_datetime", nullable = false, length = 19)

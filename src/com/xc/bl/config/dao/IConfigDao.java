@@ -1,5 +1,7 @@
 package com.xc.bl.config.dao;
 
+import java.util.List;
+
 import com.xc.bl.entities.Config;
 
 public interface IConfigDao {
@@ -12,4 +14,5 @@ public interface IConfigDao {
 	
 	public void updCfgByName(Config config);
 	
+	public List<Config> findConfig();
 }

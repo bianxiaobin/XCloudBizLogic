@@ -29,15 +29,14 @@ public class WebConfig {
 				|| curr_time > upd_last_time + UPD_INTERVAL) {
 			IConfigService iConfigService = SpringUtils
 					.getBean("configService");
-			Config cfg = iConfigService.getCfgByName(name);
-			if (cfg != null) {
-				value= cfg.getCfgValue();
-				cfg_map.put(name,value);
-				upd_last_time = curr_time;
+			List<Config> cfgList = iConfigService.findConfig();
+			for(Config cfg:cfgList){
+				cfg_map.put(cfg.getCfgName(),cfg.getCfgValue());
 			}
+			value= cfg_map.get(name);
+			upd_last_time = curr_time;
 		}
 		return value;
-
 	}
 
 	public static int setCfgByName(String name, String value) {
@@ -49,12 +48,12 @@ public class WebConfig {
 			IConfigService iConfigService = SpringUtils
 					.getBean("configService");
 			iConfigService.updCfgByName(cfg);
+			cfg_map.put(name,value);
 			result = 1;
 		} catch (Exception ex) {
 			result = -1;
 		}
 		return result;
-
 	}
 
 //	public static class Cfg {

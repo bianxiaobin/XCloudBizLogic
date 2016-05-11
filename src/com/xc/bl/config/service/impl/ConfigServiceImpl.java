@@ -1,5 +1,7 @@
 package com.xc.bl.config.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +26,10 @@ public class ConfigServiceImpl implements IConfigService {
 		config.setConfigId(getCfgByName(config.getCfgName()).getConfigId());
 		configDao.updCfgByName(config);
 
+	}
+
+	@Override
+	public List<Config> findConfig() {
+		return configDao.findConfig();
 	}
 }

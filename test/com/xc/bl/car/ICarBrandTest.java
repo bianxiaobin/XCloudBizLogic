@@ -15,7 +15,7 @@ import com.xc.bl.entities.CarBrand;
 import com.xc.bl.utils.CommonDefine.BrandType;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:applicationContext*.xml")
+@ContextConfiguration(locations = "classpath*:applicationContext*.xml")
 public class ICarBrandTest {
 	@Autowired
 	private ICarBrandService carBrandService;

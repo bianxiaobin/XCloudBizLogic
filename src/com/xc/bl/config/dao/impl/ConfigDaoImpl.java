@@ -1,5 +1,7 @@
 package com.xc.bl.config.dao.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -23,6 +25,11 @@ public class ConfigDaoImpl implements IConfigDao {
 	public void updCfgByName(Config config) {
 		config.setConfigId(getCfgByName(config.getCfgName()).getConfigId());
 		baseDAO.update(config);
+	}
+
+	@Override
+	public List<Config> findConfig() {
+		return baseDAO.find("from Config");
 	}
 
 }

@@ -16,7 +16,7 @@ import com.xc.bl.entities.CarGrade;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath:applicationContext*.xml")
+@ContextConfiguration(locations="classpath*:applicationContext*.xml")
 public class ICarGradeTest {
 
 	@Autowired
@@ -41,7 +41,7 @@ public class ICarGradeTest {
 
 	@Test
 	public void testGetCarGradeByName() {
-		CarGrade cg=carGradeService.getCarGradeByName("CT 豪华商务舒适版");
+		CarGrade cg=carGradeService.getCarGradeByName("手动 时尚型");
 		if(cg!=null){
 			System.out.println("(Name)配置等级 -> "+cg.toString());
 			assertTrue(true);
@@ -67,7 +67,7 @@ public class ICarGradeTest {
 
 	@Test
 	public void testGetCarGradeByUnique() {
-		CarGrade cg=carGradeService.getCarGradeByUnique("手动 尊享型", 2015, "1.5L", 1);
+		CarGrade cg=carGradeService.getCarGradeByUnique("手动 舒适版", 2016, "1.8L", 97);
 		if(cg!=null){
 			System.out.println(cg.toString());
 			assertTrue(true);

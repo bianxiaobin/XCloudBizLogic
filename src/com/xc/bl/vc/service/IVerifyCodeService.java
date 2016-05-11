@@ -1,5 +1,7 @@
 package com.xc.bl.vc.service;
 
+import java.util.Calendar;
+
 import com.xc.bl.entities.VerificationCode;
 
 public interface IVerifyCodeService {
@@ -23,4 +25,18 @@ public interface IVerifyCodeService {
 	 * @return
 	 */
 	public VerificationCode getVcFirstByPhoneVc(long phoneNum,String vc);
+	
+	/**
+	 * 更新验证码信息
+	 * @param vc
+	 */
+	public void updVc(VerificationCode vc);
+	
+	/**
+	 * 获得指定时间范围发送总条数
+	 * @param begin
+	 * @param end
+	 * @return
+	 */
+	public long getCountByDate(Calendar begin,Calendar end);
 }
