@@ -51,4 +51,9 @@ public class UserInfoDaoImpl implements IUserInfoDao {
 
 	}
 
+	@Override
+	public long getUserCount() {
+		return baseDAO.count("select count(*) from User"); 
+	}
+
 }

@@ -42,4 +42,9 @@ public class UserInfoServiceImpl implements IUserInfoService {
 
 	}
 
+	@Override
+	public long getUserCount() {
+		return userInfoDao.getUserCount();
+	}
+
 }

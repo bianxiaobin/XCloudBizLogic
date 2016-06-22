@@ -13,14 +13,14 @@ import org.dom4j.Element;
 
 public class SendSms {
 
-	private static String Url = "http://106.ihuyi.cn/webservice/sms.php?method=Submit";
+	private static String Url = "/webservice/sms.php?method=Submit";
 	private static String ACCOUNT = "cf_sainade";
 	private static String PWD = "cbsi1234567";
 
 	public static String  SendSmsContent(long phone, String content)
 			throws HttpException, IOException {
 		HttpClient client = new HttpClient();
-		PostMethod method = new PostMethod(Url);
+		PostMethod method = new PostMethod(WebConfig.getCfgByName(WebConfigType.SMS_SERVER)+Url);
 		// client.getParams().setContentCharset("GBK");
 		client.getParams().setContentCharset("UTF-8");
 		method.setRequestHeader("ContentType",

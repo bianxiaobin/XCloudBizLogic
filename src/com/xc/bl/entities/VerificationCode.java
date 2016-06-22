@@ -93,4 +93,11 @@ public class VerificationCode implements java.io.Serializable {
 		this.vcSendDatetime = vcSendDatetime;
 	}
 
+	@Override
+	public String toString() {
+		return "VerificationCode [vcId=" + vcId + ", vcPhone=" + vcPhone
+				+ ", vcValue=" + vcValue + ", vcSendResult=" + vcSendResult
+				+ ", vcSendDatetime=" + vcSendDatetime + "]";
+	}
+
 }

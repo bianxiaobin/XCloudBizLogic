@@ -36,4 +36,9 @@ public interface IUserInfoService {
 	 */
 	public int UpdLastLoginTime(long uid);
 	
+	/**
+	 * 获得用户数
+	 * @return
+	 */
+	public long getUserCount();
 }

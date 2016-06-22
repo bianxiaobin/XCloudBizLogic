@@ -38,5 +38,11 @@ public interface IUserInfoDao {
 	 * @return User
 	 */
 	public User getUserByPhone(long phoneNum);
+	
+	/**
+	 * 获得用户数
+	 * @return
+	 */
+	public long getUserCount();
 
 }

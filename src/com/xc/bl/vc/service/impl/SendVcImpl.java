@@ -47,6 +47,7 @@ public class SendVcImpl implements ISendVc {
 					
 					//更新短信发送结果
 					SendSms.SendSmsResult sendSmsResult=SendSms.convertResult(submitResult);
+					logger.debug("转换后结果 -> "+sendSmsResult.toString());
 					verificationCode.setVcSendResult(sendSmsResult.toString());
 					verifyCodeService.updVc(verificationCode);
 					

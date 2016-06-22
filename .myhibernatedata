@@ -1,5 +1,5 @@
 #MyEclipse Hibernate Properties
-#Tue May 03 14:45:36 CST 2016
+#Wed May 18 16:00:50 CST 2016
 genBasicCompId=true
 sessionFactoryName=com.xc.bl.pojo.HibernateSessionFactory
 profile=
@@ -15,6 +15,6 @@ genVersionTag=false
 sessionFactoryId=
 basePersistenceClass=
 genAnnotations=true
-reSettingsFile=
+reSettingsFile=/XCloudBizLogic/hibernate.reveng.xml
 configFile=/XCloudBizLogic/src/hibernate.cfg.xml
 createConfigFile=true

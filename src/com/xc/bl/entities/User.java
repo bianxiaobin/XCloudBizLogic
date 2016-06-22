@@ -80,4 +80,12 @@ public class User implements java.io.Serializable {
 		this.userDatetimeAccessLast = userDatetimeAccessLast;
 	}
 
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", userPhone=" + userPhone
+				+ ", userSid=" + userSid + ", userDatetimeAccessLast="
+				+ userDatetimeAccessLast + "]";
+	}
+
+	
 }
