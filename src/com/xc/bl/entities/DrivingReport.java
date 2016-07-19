@@ -28,6 +28,7 @@ public class DrivingReport implements java.io.Serializable {
 	private Integer drSuddenStop;
 	private String drErrcode;
 	private String drTirePressure;
+	private String drGpsLatlon;
 	private Date drDate;
 
 	// Constructors
@@ -46,7 +47,7 @@ public class DrivingReport implements java.io.Serializable {
 	public DrivingReport(Long userId, Integer drTotalMileage,
 			Integer drRotateSpeed, Integer drSpeed, Float drFuel,
 			Integer drWaterTemperature, Integer drSuddenStop, String drErrcode,
-			String drTirePressure, Date drDate) {
+			String drTirePressure, String drGpsLatlon, Date drDate) {
 		this.userId = userId;
 		this.drTotalMileage = drTotalMileage;
 		this.drRotateSpeed = drRotateSpeed;
@@ -56,6 +57,7 @@ public class DrivingReport implements java.io.Serializable {
 		this.drSuddenStop = drSuddenStop;
 		this.drErrcode = drErrcode;
 		this.drTirePressure = drTirePressure;
+		this.drGpsLatlon = drGpsLatlon;
 		this.drDate = drDate;
 	}
 
@@ -150,6 +152,15 @@ public class DrivingReport implements java.io.Serializable {
 
 	public void setDrTirePressure(String drTirePressure) {
 		this.drTirePressure = drTirePressure;
+	}
+
+	@Column(name = "dr_gps_latlon", length = 50)
+	public String getDrGpsLatlon() {
+		return this.drGpsLatlon;
+	}
+
+	public void setDrGpsLatlon(String drGpsLatlon) {
+		this.drGpsLatlon = drGpsLatlon;
 	}
 
 	@Temporal(TemporalType.DATE)

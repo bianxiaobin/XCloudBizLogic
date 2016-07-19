@@ -3,4 +3,5 @@
 
 <hibernate-reverse-engineering>
 
+	<table name="user_gps_log" catalog="xcdb"></table>
 </hibernate-reverse-engineering>

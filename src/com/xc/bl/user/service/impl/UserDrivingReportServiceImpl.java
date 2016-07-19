@@ -1,5 +1,7 @@
 package com.xc.bl.user.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,16 @@ public class UserDrivingReportServiceImpl implements IUserDrivingReportService {
 	@Override
 	public DrivingReport getDRByUserLast(long uid) {
 		return iUserDrivingReportDao.getDRByUserLast(uid);
+	}
+
+	@Override
+	public List<DrivingReport> getDRByUser(long uid) {
+		return iUserDrivingReportDao.getDRByUser(uid);
+	}
+
+	@Override
+	public void updDrivingReport(DrivingReport dr) {
+		iUserDrivingReportDao.updDrivingReport(dr);
 	}
 
 }
