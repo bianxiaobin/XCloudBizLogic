@@ -39,4 +39,16 @@ public interface IVerifyCodeService {
 	 * @return
 	 */
 	public long getCountByDate(Calendar begin,Calendar end);
+	
+	
+	/**
+	 * 获得指定时间范围手机号发送的总条数
+	 * @param phoneNum
+	 * @param begin
+	 * @param end
+	 * @return
+	 */
+	public long getSendCount(long phoneNum,Calendar begin,Calendar end);
+	
+	
 }

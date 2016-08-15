@@ -56,6 +56,12 @@ public class VerifyCodeDaoImpl implements IVerifyCodeDao {
 		//logger.debug("开始时间 -> "+begin.getTime().toString()+"  结束时间 -> "+end.getTime().toString());
 		return baseDAO.count("select count(*) from VerificationCode where vcSendDatetime>? and vcSendDatetime<? ",new Object[]{begin.getTime(),end.getTime()});
 	}
+	
+	@Override
+	public long getSendCount(long phoneNum, Calendar begin, Calendar end) {
+		return baseDAO.count("select count(*) from VerificationCode where vcSendDatetime>? and vcSendDatetime<? and vcPhone=? ",new Object[]{begin.getTime(),end.getTime(),phoneNum});
+	}
+
 
 	@Override
 	public void addVc(VerificationCode vc) {
@@ -66,7 +72,5 @@ public class VerifyCodeDaoImpl implements IVerifyCodeDao {
 	public void updVc(VerificationCode vc) {
 		baseDAO.update(vc);
 	}
-
-
 
 }

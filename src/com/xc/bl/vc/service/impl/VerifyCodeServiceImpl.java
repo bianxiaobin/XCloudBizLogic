@@ -46,4 +46,9 @@ public class VerifyCodeServiceImpl implements IVerifyCodeService {
 		return verifyCodeDao.getCountByDate(begin, end);
 	}
 
+	@Override
+	public long getSendCount(long phoneNum, Calendar begin, Calendar end) {
+		return verifyCodeDao.getSendCount(phoneNum, begin, end);
+	}
+
 }
