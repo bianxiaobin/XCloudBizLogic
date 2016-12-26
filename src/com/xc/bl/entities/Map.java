@@ -25,6 +25,7 @@ public class Map implements java.io.Serializable {
 	private Timestamp dbCreatetime;
 	private Timestamp dbUpdatetime;
 	private Boolean dbDelete;
+	private String mapPinyin;
 
 	// Constructors
 
@@ -139,5 +140,13 @@ public class Map implements java.io.Serializable {
 	public void setDbDelete(Boolean dbDelete) {
 		this.dbDelete = dbDelete;
 	}
+	@Column(name = "map_pinyin")
+	public String getMapPinyin() {
+		return mapPinyin;
+	}
 
+	public void setMapPinyin(String mapPinyin) {
+		this.mapPinyin = mapPinyin;
+	}
+	
 }

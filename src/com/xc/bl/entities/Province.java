@@ -19,6 +19,7 @@ public class Province implements java.io.Serializable {
 	private Integer provinceId;
 	private String provinceName;
 	private String provinceShowName;
+	private String provincePinyin;
 
 	// Constructors
 
@@ -61,5 +62,14 @@ public class Province implements java.io.Serializable {
 	public void setProvinceShowName(String provinceShowName) {
 		this.provinceShowName = provinceShowName;
 	}
+	@Column(name = "province_pinyin", nullable = false, length = 50)
+	public String getProvincePinyin() {
+		return provincePinyin;
+	}
 
+	public void setProvincePinyin(String provincePinyin) {
+		this.provincePinyin = provincePinyin;
+	}
+	
+	
 }

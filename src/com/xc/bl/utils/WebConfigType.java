@@ -5,6 +5,7 @@ public class WebConfigType {
 	public static final String DOMAIN_TAPP="domain_tapp";
 	public static final String DOMAIN_APP="domain_app";
 	public static final String DOMAIN_MAP="domain_map";
+	public static final String DOMAIN_CAR="domain_car";
 	public static final String DOMAIN_MUSIC="domain_music";
 	public static final String MAP_UPD_REFRESH="map_upd_refresh";
 	public static final String MAP_URL_SRC_GD="map_url_src_gd";

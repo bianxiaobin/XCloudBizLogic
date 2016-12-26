@@ -28,6 +28,9 @@ public class MapUpd implements java.io.Serializable {
 	private Timestamp dbCreatetime;
 	private Timestamp dbUpdatetime;
 	private Boolean dbDelete;
+	private String mapUpdPackageNameRoute;
+	private int mapUpdSizeRoute;
+	private String mapUpdOriginalUrlRoute;
 
 	// Constructors
 
@@ -176,5 +179,33 @@ public class MapUpd implements java.io.Serializable {
 	public void setDbDelete(Boolean dbDelete) {
 		this.dbDelete = dbDelete;
 	}
+	
+	@Column(name = "map_upd_package_name_route", length = 50)
+	public String getMapUpdPackageNameRoute() {
+		return mapUpdPackageNameRoute;
+	}
 
+	public void setMapUpdPackageNameRoute(String mapUpdPackageNameRoute) {
+		this.mapUpdPackageNameRoute = mapUpdPackageNameRoute;
+	}
+
+	@Column(name = "map_upd_size_route", length = 20)
+	public int getMapUpdSizeRoute() {
+		return mapUpdSizeRoute;
+	}
+
+	public void setMapUpdSizeRoute(int mapUpdSizeRoute) {
+		this.mapUpdSizeRoute = mapUpdSizeRoute;
+	}
+
+	@Column(name = "map_upd_original_url_route", length = 200)
+	public String getMapUpdOriginalUrlRoute() {
+		return mapUpdOriginalUrlRoute;
+	}
+
+	public void setMapUpdOriginalUrlRoute(String mapUpdOriginalUrlRoute) {
+		this.mapUpdOriginalUrlRoute = mapUpdOriginalUrlRoute;
+	}
+	
+	
 }
