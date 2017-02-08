@@ -54,5 +54,9 @@ public interface ICarGradeService {
 	 */
 	public CarGradeAllInfoPo getCarGradeAllInfoById(int cgid);
 	
-	
+	/**
+	 * 更新车配置等级列表
+	 * @param carGrade
+	 */
+	public void updateCarGrade(CarGrade carGrade);
 }

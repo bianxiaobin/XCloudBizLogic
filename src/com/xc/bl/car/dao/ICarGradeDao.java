@@ -45,4 +45,9 @@ public interface ICarGradeDao {
 	 */
 	public List<CarGrade> getCarGradeByCmid(int cmid);
 	
+	/**
+	 * 更新车配置等级列表
+	 * @param carGrade
+	 */
+	public void updateCarGrade(CarGrade carGrade);
 }

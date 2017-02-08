@@ -53,4 +53,9 @@ public class CarGradeServiceImpl implements ICarGradeService {
 				.getCarGradeAllInfoById(cgid);
 
 	}
+
+	@Override
+	public void updateCarGrade(CarGrade carGrade) {
+		carGradeDao.updateCarGrade(carGrade);
+	}
 }

@@ -49,4 +49,9 @@ public class CarBrandDaoImpl implements ICarBrandDao {
 		return baseDAO.get("from CarBrand where carBrandName=?",
 				new Object[] { CBName });
 	}
+
+	@Override
+	public void updateCatBrand(CarBrand carBrand) {
+		baseDAO.update(carBrand);
+	}
 }

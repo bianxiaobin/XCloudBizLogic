@@ -100,4 +100,9 @@ public class CarGradeDaoImpl implements ICarGradeDao {
 		return baseDAO.find("from CarGrade where carModelId=?",
 				new Object[] { cmid });
 	}
+
+	@Override
+	public void updateCarGrade(CarGrade carGrade) {
+		baseDAO.update(carGrade);
+	}
 }

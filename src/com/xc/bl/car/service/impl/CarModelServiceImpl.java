@@ -37,4 +37,9 @@ public class CarModelServiceImpl implements ICarModelService {
 		return carModelDao.getCarModelByCfid(cfid);
 	}
 
+	@Override
+	public void updateCarModel(CarModel carModel) {
+		carModelDao.updateCarModel(carModel);
+	}
+
 }

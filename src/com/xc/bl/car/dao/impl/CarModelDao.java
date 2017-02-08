@@ -43,4 +43,9 @@ public class CarModelDao implements ICarModelDao {
 
 	}
 
+	@Override
+	public void updateCarModel(CarModel carModel) {
+		baseDAO.update(carModel);
+	}
+
 }

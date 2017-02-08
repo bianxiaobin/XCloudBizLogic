@@ -46,4 +46,9 @@ public class CarBrandServiceImpl implements ICarBrandService {
 
 	}
 
+	@Override
+	public void updateCatBrand(CarBrand carBrand) {
+		carBrandDao.updateCatBrand(carBrand);
+	}
+
 }

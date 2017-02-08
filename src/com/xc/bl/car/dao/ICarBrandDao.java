@@ -34,4 +34,10 @@ public interface ICarBrandDao {
 	 * @return
 	 */
 	public CarBrand getCarBrandByName(String CBName);
+	
+	/***
+	 * 更新车品牌
+	 * @param carBrand
+	 */
+	public void updateCatBrand(CarBrand carBrand);
 }

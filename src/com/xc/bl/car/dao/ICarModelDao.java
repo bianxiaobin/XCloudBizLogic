@@ -38,4 +38,10 @@ public interface ICarModelDao {
 	 * @return
 	 */
 	public List<CarModel> getCarModelByCfid(int cfid);
+	
+	/***
+	 * 更新车型列表
+	 * @param carModel
+	 */
+	public void updateCarModel(CarModel carModel);
 }
