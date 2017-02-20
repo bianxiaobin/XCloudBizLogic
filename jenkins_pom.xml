@@ -1,9 +1,17 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+﻿<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>XCloudBizLogic</groupId>
 	<artifactId>XCloudBizLogic</artifactId>
 	<version>0.0.1</version>
+	<!-- 作为打包jar上传至nexus上的标签命令 -->
+	<distributionManagement>
+        <repository>
+            <id>nexus-3rd</id>
+            <url>http://192.168.230.153:8081/nexus/content/repositories/thirdparty/</url>
+        </repository>
+    </distributionManagement>
+	
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<testSourceDirectory>test</testSourceDirectory>
