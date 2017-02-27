@@ -15,6 +15,7 @@ public class WebConfigType {
 	public static final String TEST_USER_PHONE_SCOPE_MAX="test_user_phone_scope_max";
 	public static final String MOST_VERCODE_IOS="most_vercode_ios";
 	public static final String SMS_SERVER="sms_server";
+	public static final String SHOP_URL="shop_url";
 	
 	public static class MAP_UPD_REFRESH_VALUE{
 		//刷新
